@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+    }
+
+
+    div.image-container {
+      background-image: url("src/photo-1585202900225-6d3ac20a6962.avif");
+      width: calc(100vw / 3);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+
+
+    div.hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: calc(100% / 4);
+    }
+
+
+    p.credit {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-top: calc((100% / 4) * 4);
+    }
+
+
+    button.submit {
+      width: calc(100% / 6);
+      height: 35px;
+      background-color: #617c5c;
+      border-radius: 5px;
+      border: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+
+    div.form-container {
+      margin-left: 35px;
+    }
+
+
+    form.info {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    fieldset.fieldset {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    div.input {
+      display: flex;
+      flex-direction: row;
+    }
+
+
+    div.input-group {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="image-container">
+    <div class="hero">
+      <img src="src/odin-lined.png" alt="Logo" class="logo">
+      <h1>Odin</h1>
+    </div>
+    <p class="credit">Photo by<a href="#">Halie West</a>on<a href="#">Unsplash</a></p>
+  </div>
+
+
+
+
+  <div class="form-container">
+    <div class="para">
+      <h4>
+        This is not a real online service! You know you need something like this in your life to
+        help you realize your deepest dreams. Sign up <em>now</em> to get started.
+      </h4>
+      <h4>You <em>know</em> you want to.</h4>
+    </div>
+    <form action="#" class="info">
+      <legend class="legend">Let's do this!</legend>
+      <fieldset class="fieldset">
+        <div class="input">
+          <div class="input-group">
+            <label for="firstname">FIRST NAME</label>
+            <input type="text" name="firstname" class="fname">
+          </div>
+          <div class="input-group">
+            <label for="lastname">LAST NAME</label>
+            <input type="text" name="lastname" class="lname">
+          </div>
+        </div>
+   
+        <div class="input">
+          <div class="input-group">
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" class="email">
+          </div>
+          <div class="input-group">
+            <label for="phonenumber">PHONE NUMBER</label>
+            <input type="tel" name="phonenumber" class="pnumber" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}">
+          </div>
+        </div>
+   
+        <div class="input">
+          <div class="input-group">
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" class="password">
+          </div>
+          <div class="input-group">
+            <label for="confirmpassword">CONFIRM PASSWORD</label>
+            <input type="password" name="confirmpassword" class="cpassword">
+          </div>
+        </div>
+      </fieldset>
+      <button class="submit" type="submit">Create Account</button>
+    </form>
+
+
+    <p>Already have an account? <a href="#">Log in</a></p>
+  </div>
+</body>
+
+</html>
