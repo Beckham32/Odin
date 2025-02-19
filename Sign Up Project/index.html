@@ -1,152 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+      @font-face {
+        font-family: 'NorseBold';
+        src: url('src/Norse-Bold.otf');
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-    }
+      body {
+        margin: 0;
+        display: flex;
+      }
 
+      div.image-container {
+        background-image: url("src/photo-1585202900225-6d3ac20a6962.avif");
+        width: calc(100vw / 3);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-    div.image-container {
-      background-image: url("src/photo-1585202900225-6d3ac20a6962.avif");
-      width: calc(100vw / 3);
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-    }
+      div.hero {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: calc(100% / 4);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        font-family: "NorseBold";
+        font-size: 44px;
+      }
 
+      div.hero img {
+        height: auto;
+        width: 100px;
+      }
 
-    div.hero {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: calc(100% / 4);
-    }
+      p.credit {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-top: calc(100vh / 4 * 2.5);
+        color: white;
+      }
 
+      p.credit a {
+        color: white;
+        margin: 0 5px 0 5px;
+      }
 
-    p.credit {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      margin-top: calc((100% / 4) * 4);
-    }
+      div.form-container {
+        padding-top: calc(100vh / 8);
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
+      button.submit {
+        width: calc(100% / 6);
+        height: 40px;
+        background-color: #596D48;
+        border-radius: 5px;
+        border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-weight: bolder;
+        margin-top: 25px;
+        transition: all 0.4s ease-in-out;
+      }
 
-    button.submit {
-      width: calc(100% / 6);
-      height: 35px;
-      background-color: #617c5c;
-      border-radius: 5px;
-      border: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-      font-weight: bold;
-    }
+      button.submit:hover {
+        background-color: #ffffff;
+        outline: 2px solid #596D48;
+        font-weight: bolder;
+        color: #596D48;
+        cursor: pointer;
+      }
 
+      button.submit:active {
+        background-color: #0f0f0f;
+        outline: 0;
+        font-weight: bolder;
+        color: #ffffff;
+      }
 
-    div.form-container {
-      margin-left: 35px;
-    }
+      form.info {
+        display: flex;
+        flex-direction: column;
+      }
 
+      fieldset.fieldset {
+        display: flex;
+        flex-direction: column;
+      }
 
-    form.info {
-      display: flex;
-      flex-direction: column;
-    }
+      div.input {
+        display: flex;
+        flex-direction: row;
+      }
 
+      div.input-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
 
-    fieldset.fieldset {
-      display: flex;
-      flex-direction: column;
-    }
+      input.input {
+        height: 25px;
+        border-radius: 4px;
+        border: 1px solid #E5E7EB;
+        margin-right: 60px;
+        width: 250px;
+      }
 
+      input.input:focus {
+        border-color: rgb(70, 150, 255);
+        outline: 0;
+      }
 
-    div.input {
-      display: flex;
-      flex-direction: row;
-    }
+      input.input:invalid {
+        border-color: rgb(255, 51, 51);
+      }
 
+      label {
+        font-size: 10px;
+      }
 
-    div.input-group {
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
-</head>
+      div.para {
+        margin-left: 45px;
+        font-size: 18px;
+      }
 
+      fieldset {
+        border: 0;
+        margin: 0 0 25px 0;
+        padding: 0;
+        margin-left: 45px;
+      }
 
-<body>
-  <div class="image-container">
-    <div class="hero">
-      <img src="src/odin-lined.png" alt="Logo" class="logo">
-      <h1>Odin</h1>
+      legend {
+        font-size: 16px;
+        margin: 50px 0 0 45px;
+      }
+
+      div.form-submit {
+        width: calc((100vw / 3) * 2);
+        margin-top: 15px;
+      }
+
+      div.form-submit > button, p {
+        margin-left: 45px;
+      }
+
+      p.account {
+        font-size: 12px;
+        margin-top: 25px;
+      }
+
+      p.account a {
+        color: #596D48;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      div.seperator {
+        width: calc((100vw / 3) * 2);
+        height: 10px;
+        background: linear-gradient(rgba(180, 180, 180, 0.5), transparent);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="image-container">
+      <div class="hero">
+        <img src="src/odin-lined.png" alt="Logo" class="logo">
+        <h1>Odin</h1>
+      </div>
+      <p class="credit">
+        Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a>
+      </p>
     </div>
-    <p class="credit">Photo by<a href="#">Halie West</a>on<a href="#">Unsplash</a></p>
-  </div>
 
-
-
-
-  <div class="form-container">
-    <div class="para">
-      <h4>
-        This is not a real online service! You know you need something like this in your life to
-        help you realize your deepest dreams. Sign up <em>now</em> to get started.
-      </h4>
-      <h4>You <em>know</em> you want to.</h4>
+    <div class="form-container">
+      <div class="para">
+        <h4>
+          This is not a real online service! You know you need something<br>
+          like this in your life to help you realize your deepest dreams.<br>
+          Sign up <em>now</em> to get started.
+        </h4>
+        <h4>You <em>know</em> you want to.</h4>
+      </div>
+      <form action="#" class="info">
+        <legend class="legend">Let's do this!</legend>
+        <fieldset class="fieldset">
+          <div class="input">
+            <div class="input-group">
+              <label for="firstname">FIRST NAME</label>
+              <input type="text" name="firstname" class="input">
+            </div>
+            <div class="input-group">
+              <label for="lastname">LAST NAME</label>
+              <input type="text" name="lastname" class="input">
+            </div>
+          </div>
+    
+          <div class="input">
+            <div class="input-group">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" class="input">
+            </div>
+            <div class="input-group">
+              <label for="phonenumber">PHONE NUMBER</label>
+              <input type="tel" name="phonenumber" class="input">
+            </div>
+          </div>
+    
+          <div class="input">
+            <div class="input-group">
+              <label for="password">PASSWORD</label>
+              <input type="password" name="password" class="input" id="password" maxlength="12" minlength="6" required>
+            </div>
+            <div class="input-group">
+              <label for="confirmpassword">CONFIRM PASSWORD</label>
+              <input type="password" name="confirmpassword" class="input" id="cpassword" maxlength="12" minlength="6" required>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-submit">
+          <div class="seperator"></div>
+          <button class="submit" type="submit">Create Account</button>
+          <p class="account">Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </form>
+      
     </div>
-    <form action="#" class="info">
-      <legend class="legend">Let's do this!</legend>
-      <fieldset class="fieldset">
-        <div class="input">
-          <div class="input-group">
-            <label for="firstname">FIRST NAME</label>
-            <input type="text" name="firstname" class="fname">
-          </div>
-          <div class="input-group">
-            <label for="lastname">LAST NAME</label>
-            <input type="text" name="lastname" class="lname">
-          </div>
-        </div>
-   
-        <div class="input">
-          <div class="input-group">
-            <label for="email">EMAIL</label>
-            <input type="email" name="email" class="email">
-          </div>
-          <div class="input-group">
-            <label for="phonenumber">PHONE NUMBER</label>
-            <input type="tel" name="phonenumber" class="pnumber" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}">
-          </div>
-        </div>
-   
-        <div class="input">
-          <div class="input-group">
-            <label for="password">PASSWORD</label>
-            <input type="password" name="password" class="password">
-          </div>
-          <div class="input-group">
-            <label for="confirmpassword">CONFIRM PASSWORD</label>
-            <input type="password" name="confirmpassword" class="cpassword">
-          </div>
-        </div>
-      </fieldset>
-      <button class="submit" type="submit">Create Account</button>
-    </form>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementsByClassName("info");
+        let cpassword;
+        let password;
+        document.getElementById("cpassword").addEventListener("input", () => {
+          cpassword = document.getElementById("cpassword").value;
+        });
+        document.getElementById("password").addEventListener("input", () => {
+          password = document.getElementById("password").value;
+        });
 
-    <p>Already have an account? <a href="#">Log in</a></p>
-  </div>
-</body>
+        form.addEventListener("submit", () => {
+          if (cpassword === password) {
+            console.log("Form Submit.");
+          }
+        });
+      });
+    </script>
+  </body>
 
 </html>
